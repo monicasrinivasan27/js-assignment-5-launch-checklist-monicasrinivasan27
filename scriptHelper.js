@@ -1,7 +1,6 @@
 // Write your helper functions here!
 require('isomorphic-fetch');
 
-
 function addDestinationInfo(document, name, diameter, star, distance, moons, imageUrl) {
    // Here is the HTML formatting for our mission target div.
                 const div = document.getElementById("missionTarget");
@@ -45,7 +44,6 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
         validateInput(copilot) == "Empty" ||  
         validateInput(fuelLevel) == "Empty" ||  
         validateInput(cargoLevel) == "Empty") {
-            console.log('inside');
         alert("All fields are required!");
     }
     else if(validateInput(pilot) === "Is a Number" ||

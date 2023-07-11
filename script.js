@@ -1,5 +1,4 @@
 // Write your JavaScript code here!
-
 window.addEventListener("load", function() {
     //Added by Monica for the testcase to be passed.
     faultyItems.style.visibility = 'hidden';
