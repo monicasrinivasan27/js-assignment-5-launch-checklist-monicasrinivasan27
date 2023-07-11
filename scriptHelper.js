@@ -1,7 +1,6 @@
 // Write your helper functions here!
 require('isomorphic-fetch');
-//const fetch = require('node-fetch');
-//import fetch from 'node-fetch';
+
 
 function addDestinationInfo(document, name, diameter, star, distance, moons, imageUrl) {
    // Here is the HTML formatting for our mission target div.
@@ -103,38 +102,18 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
           `; 
         }
 }
+
 async function myFetch() {
-  // try{
-
-    let planetsReturned;
-    planetsReturned = await fetch("https://handlers.education.launchcode.org/static/planets.json").then(function(response) { 
-      return  response.json();
-   
-     
-     // response.json().then( function(json) {
-      //  console.log(json[0].name);
-     //   });
-    });
-    return planetsReturned;
-  /*}catch(error){
-    console.error(error)
-  }*/
-}
-
-
-
+  let planetsReturned;
+  planetsReturned = await fetch("https://handlers.education.launchcode.org/static/planets.json").then( (response) => response.json())
+  return planetsReturned;
+};
 
 function pickPlanet(planets) {
-  // try{
     let random = Math.round(Math.random() * planets.length);
-    console.log(planets[random]);
+   // console.log(planets[random]);
     return planets[random];
-  /*}catch (error){
-    console.error(error)
-  }*/
-  
-}
-
+ }
 
 module.exports.addDestinationInfo = addDestinationInfo;
 module.exports.validateInput = validateInput;
